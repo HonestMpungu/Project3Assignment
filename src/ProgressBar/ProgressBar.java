@@ -26,7 +26,7 @@ public class ProgressBar {
 
         frame.add(bar);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, 420);
+        frame.setSize(600, 620);
         frame.setLayout(null);
         frame.setVisible(true);
 
@@ -36,17 +36,17 @@ public class ProgressBar {
     public void fill() {
         int counter =0;
 
-        while(counter<=30) {
+        while(counter<=20) {
 
             bar.setValue(counter);
             try {
-                Thread.sleep(50);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
             counter +=1;
         }
-        bar.setString("Progress Mark! :)");
+        bar.setString("Progress Bar! :)");
     }
 }
